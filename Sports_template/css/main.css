@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.featured {
+  background: #eeeeee;
+  padding: 0 0 6rem 0;
+}
+
+.featured-item {
+  display: block;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+.featured_details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.featured-item:hover,
+.featured-item:focus {
+  transform: scale(1);
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.split > * {
+  flex-basis: 30%;
+  min-width: 15em;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  padding: 0.5em 1.25em;
+  background: var(--cls-accent, rgb(72, 235, 50));
+  border-radius: 0.25em;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+}
+
+.section {
+  padding: 7em 0;
+}
+
+.primary-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1em;
+  color: #17353d;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+}
+
+.product {
+  background: radial-gradient(
+    var(--clr-inner, limegreen),
+    var(--clr-outer, purple)
+  );
+  padding: 3em 0;
+  border-radius: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+.product img {
+  margin: auto;
+}
+
+.product_title {
+  font-size: 4rem;
+  color: #fff;
+  margin: auto;
+  text-shadow: 0 0 0.2em rgba(#000000, 0.2);
+}
+
+.shoe-red {
+  --clr-inner: #4addc9;
+  --clr-outer: #22fcfc;
+  --clr-accent: #179ca1;
+}
+.shoe-white {
+  --clr-inner: #efc4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #284858;
+}
+.shoe-blue {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
+}
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background-image: url(../img/Background_shoe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
